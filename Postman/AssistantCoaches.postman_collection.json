@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "1bff11e9-d4f3-4693-b5a4-b3eb96f7c148",
+		"name": "AssistantCoaches",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": \"50\",\r\n    \"name\": \"Pepe Changarico\",\r\n    \"nickname\": \"changa\",\r\n    \"salary\": \"890000.00\",\r\n    \"state\": \"True\",\r\n    \"coach\": {\r\n        \"id\": \"5\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}assistant-coaches",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}assistant-coaches",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}assistant-coaches",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": 50,\r\n    \"name\": \"Pepe Changarico\",\r\n    \"nickname\": \"changa\",\r\n    \"salary\": \"890000.00\",\r\n    \"state\": \"True\",\r\n    \"coach\": {\r\n        \"id\": \"9\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}assistant-coaches/11",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					],
+					"path": [
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\" : \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}assistant-coaches/destroys",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					],
+					"path": [
+						"destroys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inactivate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"state\" : \"false\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}assistant-coaches/14/inactivate",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					],
+					"path": [
+						"14",
+						"inactivate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"state\" : \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}assistant-coaches/14/activate",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					],
+					"path": [
+						"14",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}assistant-coaches/9",
+					"host": [
+						"{{HOST}}assistant-coaches"
+					],
+					"path": [
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

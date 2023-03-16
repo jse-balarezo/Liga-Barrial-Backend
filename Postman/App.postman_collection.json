@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "f5c3e3ae-77c4-4fe7-a485-72b6a4d5fc90",
+		"name": "App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pokemon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_POKEMON}}ability",
+					"host": [
+						"{{API_POKEMON}}ability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marvel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_MARVEL}}comics?apikey=1b381d48c192057e3795adb478ab705e&ts=1234&hash=a6ca050949aa7d76026f9d149369ed00",
+					"host": [
+						"{{API_MARVEL}}comics"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "1b381d48c192057e3795adb478ab705e"
+						},
+						{
+							"key": "ts",
+							"value": "1234"
+						},
+						{
+							"key": "hash",
+							"value": "a6ca050949aa7d76026f9d149369ed00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

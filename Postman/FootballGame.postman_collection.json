@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "822e1e6d-9bc8-4fa0-80ea-14b14c6ef200",
+		"name": "FootballGame",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"22/07/2020\",\r\n    \"loser\": \"barcelona\",\r\n    \"numberMatches\": 10,\r\n    \"penalties\": \"true\",\r\n    \"winner\": \"perus\",\r\n    \"tied\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}football-games",
+					"host": [
+						"{{HOST}}football-games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}football-games",
+					"host": [
+						"{{HOST}}football-games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}football-games/1",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"22/07/2020\",\r\n    \"loser\": \"barcelona\",\r\n    \"numberMatches\": 10,\r\n    \"penalties\": \"true\",\r\n    \"winner\": \"orense\",\r\n    \"tied\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}football-games/1",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}football-games/11",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "syncWithoutPlayer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [1,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}football-games/9/players",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"9",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attachPlayer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}football-games/10/players/7",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"10",
+						"players",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deattachPlayer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}football-games/1/players/9",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"1",
+						"players",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tied\" : \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}football-games/1/activate",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"1",
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detachPlayer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}football-games/7/players",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"7",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "syncPlayer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [1,3]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}football-games/9/players/",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"9",
+						"players",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inactivate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tied\" : \"false\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}football-games/1/inactivate",
+					"host": [
+						"{{HOST}}football-games"
+					],
+					"path": [
+						"1",
+						"inactivate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\" : \"9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}football-game/destroys",
+					"host": [
+						"{{HOST}}football-game"
+					],
+					"path": [
+						"destroys"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
